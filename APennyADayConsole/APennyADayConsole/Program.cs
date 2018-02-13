@@ -4,6 +4,8 @@ namespace APennyADayConsoleApp
 {
     class Program
     {
+        public static object NumberFormat { get; private set; }
+
         static void Main(string[] args)
         {
             string input;
@@ -22,7 +24,7 @@ namespace APennyADayConsoleApp
                 pennyTotal = 1;
                 count = 0;
 
-                numDays = Convert.ToUInt64(input);
+                numDays = Convert.ToInt64(input);
                 Console.WriteLine("days " + numDays);
                 while (count != numDays)
                 {
@@ -37,7 +39,6 @@ namespace APennyADayConsoleApp
 
                 Console.WriteLine("Total in cents is: " + pennyTotal);
                 Console.WriteLine("Total in Dollars is: $" + output);
-
                 //max 62
                 Console.WriteLine("Enter number of days up to 62 (x to exit): ");
                 input = Console.ReadLine();
