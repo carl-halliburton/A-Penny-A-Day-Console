@@ -35,7 +35,7 @@ namespace APennyADayConsoleApp
 
                 dollarValue = pennyTotal / 100.0;
 
-                output = Math.Round(dollarValue, 2).ToString();
+                output = Convert.ToDecimal(dollarValue).ToString("#,##0.00");
 
                 Console.WriteLine("Total in cents is: " + pennyTotal);
                 Console.WriteLine("Total in Dollars is: $" + output);
